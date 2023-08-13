@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HI-News</title>
+        <link rel="icon" href="./images/icons/hi news logo.svg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="login.css">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+       
+    
+    
+        <script src="https://kit.fontawesome.com/b4fc311639.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+
+    <!-- login-form -->
+    <div class="container">
+        <div class="form-container">
+            <div class="login-display">
+                <div class="logo-wrapper"><img src="../images/icons/cars.webp" alt=""></div>
+                <h2>HI - <span>News</span></h2>
+                <p class="tagline">News in hand</p>
+
+                <div class="description"><p>
+                    Stay ahead with our chic news app - your effortless source for daily updates, keeping you informed and engaged with a simple tap!</p></div>
+            </div>
+            <!-- Main login form right side -->
+            <div class="main-form">
+                <div class="form-top"><p>Don't have a account?</p><button onclick="signUp()"><a class="signup-anchor" href="./signup.html">Create Account</a></button></div>
+                <div class="login-div">
+                    <h2>Log into HI-News</h2>
+                    <p class="login-para">Enter your login credential</p>
+                    <label for="email">
+                        <p>Email address</p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input  type="email" placeholder="Enter your Email address" id="loginEmail">
+                    </label>
+                    <label for="password">
+                        <p>Password </p>
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="Enter your password here" id="loginPassword">
+                    </label>
+
+                    <div class="error" id="error">Invalid Email or Password!</div>
+
+                    <a id="forgotPass" class="forgot" href="#">Forget Password?</a>
+
+                    <button class="loginbtn" id="loginBtn">login</button>
+
+                    <div class="otheroptions">
+                        <p>or login with:</p>
+                        <div>
+                       <button id="googleLogin"><img src="../images/icons/google.png" alt=""></button>
+                       <button><img src="../images/icons/face.png" alt=""></button>
+                       <button><img src="../images/icons/phone-call.png" alt=""></button>
+                                                  </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- login-form -->
+
+
+    
+    <!-- scripts -->
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    
+    
+
+</body>
+</html>

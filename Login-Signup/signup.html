@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HI-News</title>
+    <link rel="icon" href="./images/icons/hi news logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/b4fc311639.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- sign up form -->
+    <div class="container">
+      <div class="form-container">
+        <div class="login-display">
+          <div class="logo-wrapper">
+            <img src="./images/icons/hi news logo.svg" alt="" />
+          </div>
+          <h2>HI - <span>News</span></h2>
+          <p class="tagline">News in hand</p>
+
+          <div class="description">
+            <p>
+              Stay ahead with our chic news app - your effortless source for
+              daily updates, keeping you informed and engaged with a simple tap!
+            </p>
+          </div>
+        </div>
+        <div class="main-form">
+          <div class="login-div">
+            <h2 class="signup-head">SIGN UP</h2>
+            <label for="username">
+              <p>User name</p>
+              <i class="fa-solid fa-user"></i>
+              <input type="text" placeholder="Enter your Name" id="userName" />
+            </label>
+            <label for="email">
+              <p>Email address</p>
+              <i class="fa-solid fa-envelope"></i>
+              <input
+                type="email"
+                placeholder="Enter your Email address"
+                id="email"
+              />
+            </label>
+            <div class="err-div" id="err-div">hello incoorrect@!</div>
+            <label for="password">
+              <p>Password</p>
+              <i class="fa-solid fa-key"></i>
+              <input
+                type="password"
+                placeholder="Enter your password here"
+                id="password"
+              />
+              
+            </label >
+
+            <button class="signupbtn" id="signUpBtn">signup</button>
+
+            <a class="have-acc" href="./index.html">Already have account?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- login-form
+
+
+    
+    <!-- scripts -->
+
+    <script type="module" src="auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+  </body>
+</html>
