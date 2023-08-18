@@ -132,13 +132,7 @@ margin-top: -30px;
 
   /* media */
   @media only screen and (max-width: 768px) {
-    .signup-head{
-        margin-bottom: 10px;
-      
-    }
-    .custom-file-label{
-        margin-top: 1px;
-    }
+    
   }
 
 

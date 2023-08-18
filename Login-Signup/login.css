@@ -254,7 +254,13 @@ label i {
   .form-top{
     width: 90%;
     margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  
     
+  }
+  .form-middle{
+    margin-top: 30px;
   }
   
 }
