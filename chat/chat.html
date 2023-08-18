@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEO-Chats</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Chatstyle.css" />
+    <script
+      src="https://kit.fontawesome.com/b4fc311639.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <!-- main container -->
+    <div class="container">
+      <div class="chat-details">
+        <div class="current-user">
+          <img id="homeProfile" src="./images/icons/profile-user.png" alt="" />
+          <h4 id="fullName">Neon</h4>
+          <a href="" id="editBtn"><i class="fa-solid fa-edit"></i></a>
+        </div>
+        <div class="chat-list" id="chatList">
+          <!-- <ul>
+            <li>
+              <img src="./images/icons/profile-user.png" alt="" />
+              <div class="detail-wrapper">
+                <p>Hasnain Boi</p>
+                <p>Hasnain@gmail.com</p>
+              </div>
+              <div class="notification"><p>10</p></div>
+              <span class="chatTime">12:56 AM</span>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+      <div class="chat-box">
+        <div class="user-detail">
+          <img id="selectedUserPic" src="./images/icons/profile-user.png" alt="" />
+          <h2 id="selectedUser">Muhammad Ibad</h2>
+        </div>
+        <div id="mesage-box" class="message-container">
+          <!-- <div class="sender-message">Hi, how are you doing.</div> -->
+          <!-- <div class="receiver-message">Hi, I'm good what about you?</div>
+          <div class="receiver-message">Hi, I'm good what about you?</div> -->
+        </div>
+        <div class="input-chat">
+          <input id="message-input" type="text" placeholder="Write Something" />
+          <button onclick="send()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="updateBox">
+        <div>
+            <i class="fas fa-times" id="close"></i>
+        </div>
+      <div class="user-picture">
+        <img id="user-profile" src="" alt="" />
+        <label class="camera-icon" for="file-input">
+          <i class="bi bi-camera-fill"></i>
+        </label>
+        <input id="file-input" style="display: none" type="file" />
+      </div>
+      <div class="mt-4">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Full name"
+          id="userNameUdated"
+        />
+      </div>
+      <div class="mt-4">
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Email"
+          id="email"
+        />
+      </div>
+
+      <div class="d-grid mt-4">
+        <button id="update-profile" class="btn btn-primary" type="button">
+          Update profile
+        </button>
+      </div>
+      <div class="d-grid mt-4">
+        <button id="logout-btn" class="btn btn-outline-danger" type="button">
+          LOGOUT
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>

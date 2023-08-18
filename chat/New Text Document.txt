@@ -1,0 +1,10 @@
+- messages
+  - roomId
+    - messageId
+      - text
+      - senderId
+      - timestamp
+- users
+  - userId
+    - username
+    - email

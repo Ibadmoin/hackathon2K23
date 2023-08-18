@@ -15,6 +15,14 @@
     margin-top: 15%;
 }
 
+.form-middle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
+}
+
 .signup-head{
     padding-left: 10px;
     /* background: #000; */
@@ -86,12 +94,39 @@ margin-top: -30px;
     transform: scale(0.9);
   }
 
+  label  {
+    position: relative;
+
+  }
+
+  label i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+  }
+  .fa-user{
+    left: 5px;
+    top: 53%;
+  }
+
+  .fa-envelope{
+    top: 53%;
+    left: 5px;
+  }
+  .fa-key{
+    top: 54%;
+    left: 3%;
+  }
 
   .have-acc{
     text-align: end;
     text-decoration: none;
     color: var(--primary-color);
     font-size: 14px;
+  }
+
+  .div{
+    height: 90px;
   }
 
 

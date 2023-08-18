@@ -19,7 +19,8 @@ const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", () => {
   const email = document.getElementById("loginEmail").value;
-  const password = document.getElementById("loginPassword").value;
+  const password = document.getElementById("loginPass").value;
+  console.log(email,password);
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
@@ -36,6 +37,12 @@ loginBtn.addEventListener("click", () => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorMessage);
+      Swal.fire({
+        icon: 'error',
+        title :'Error! Email or password is incorrect!',
+        
+      })
+
     });
 });
 
@@ -53,7 +60,7 @@ forgotPass.addEventListener("click", (e) => {
         <i class="fa-solid fa-envelope resetEmailIcon" style="color: #259af2;"></i>
         <input type="email" id="resetEmail" class="reset-email" placeholder="Enter your email address">
         </label>
-        <button type="submit" class="resetBtn">Reset Password</button>
+        <button type="submit" class="resetBtn theme-btn">Reset Password</button>
       </form>`,
     showCancelButton: true,
     showConfirmButton: false,
@@ -118,6 +125,7 @@ googleBtn.addEventListener("click", () => {
       const errorMessage = error.message;
       // ...
 
+     
       console.log("====================================");
       console.log(errorMessage);
       console.log("====================================");
@@ -125,47 +133,3 @@ googleBtn.addEventListener("click", () => {
   console.log("done scene");
 });
 
-
-// login via SMS/phone
-
-const phoneBtn = document.getElementById("phoneBtn");
-phoneBtn.addEventListener("click",()=>{
-// custom pop-up form
-   const popup= swal.fire({
-    title: "Login via Phone",
-    html: `  <form id="loginWithPhone">
-        <label for="phone" class="phone-label">
-        <i class="fa-solid fa-phone resetEmailIcon" style="color: #259af2;"></i>
-        <input type="number" id="phoneNumber" class="theme-input" placeholder="Enter your Phone Number" requried>
-        </label>
-        <button id="sendBtn" class="theme-btn">Send Code</button>
-        <label for="Code" class="code-label">
-        <i class="fa-solid fa-phone resetEmailIcon" style="color: #259af2;"></i>
-        <input type="number" id="verificationCode" class="reset-email" placeholder="Enter verification code ">
-        </label>
-        <button type="submit" class="resetBtn">Send Code</button>
-      </form>`,
-    showCancelButton: true,
-    showConfirmButton: false,
-  });
-
-  const sendBtn = document.getElementById("sendBtn");
-  sendBtn.addEventListener("click", (e)=>{
-    e.preventDefault();
-    const phoneNumber = document.getElementById("phoneNumber");
-    if(phoneNumber.value ===""){
-    phoneNumber.classList.add("err-border");
-// removing added error class after 5 seconds
-          setTimeout(()=>{
-            phoneNumber.classList.remove("err-border");
-          },5000)
-}else{
-
-    console.log(phoneNumber.value);
-
-    // use phone function here after getting number from user if its wrong firebase will handle it.
-
-}
-
-  });
-})

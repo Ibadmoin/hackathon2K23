@@ -1,0 +1,3 @@
+
+main color : #5983f4
+secondary-color-bg: #5983f4
